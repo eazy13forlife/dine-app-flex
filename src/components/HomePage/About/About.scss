@@ -1,0 +1,24 @@
+.About {
+  grid-column: full-start / full-end;
+
+  &__content {
+    grid-column: center-start / center-end;
+    background-color: blue;
+  }
+  &__rectangle {
+    width: 89.5rem;
+    height: 32rem;
+    background-color: #ebecf0;
+    &--right-curved {
+      border-top-right-radius: 10rem;
+    }
+    &--left-curved {
+      border-top-left-radius: 10rem;
+    }
+  }
+  &__image {
+    &--farm {
+      grid-column: center-start / col-end 6;
+    }
+  }
+}

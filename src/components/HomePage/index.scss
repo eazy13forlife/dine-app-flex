@@ -1,0 +1,8 @@
+.HomePage {
+  display: grid;
+  grid-template-columns:
+    [full-start] 16.5rem [center-start] repeat(12, [col-start] 6.5rem [col-end])
+    [center-end]
+    16.5rem [full-end];
+  grid-column-gap: 3rem;
+}

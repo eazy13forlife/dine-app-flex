@@ -1,0 +1,21 @@
+.Header {
+  background-image: url("../../../images/homepage/hero-bg-desktop@2x.jpg");
+  background-size: cover;
+  height: 82rem;
+  grid-column: full-start / full-end;
+  color: var(--light);
+
+  &__content {
+    display: grid;
+    grid-column: center-start / col-end 6;
+    grid-template-rows: 20rem auto auto 1fr;
+    grid-row-gap: 3.5rem;
+  }
+  &__logo {
+    margin-top: 6.5rem;
+  }
+  &__button {
+    justify-self: start;
+    align-self: start;
+  }
+}
