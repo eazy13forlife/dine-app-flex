@@ -1,3 +1,15 @@
+:root {
+  --primary-color-1: #9e7f66;
+  --primary-color-2: #111111;
+
+  --secondary-color-1: #17192b;
+  --secondary-color-2: #242b37;
+  --secondary-color-3: #5c6779;
+
+  --button-light: #ffffff;
+  --button-dark: #111111;
+  -button-inactive: #979797;
+}
 html {
   font-size: 62.5%;
 }
@@ -12,4 +24,5 @@ html {
 
 body {
   box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
 }

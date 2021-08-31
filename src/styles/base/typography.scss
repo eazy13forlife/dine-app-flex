@@ -1,0 +1,50 @@
+/**
+light-300
+regular-400
+semi-bold-600
+bold-700
+
+**/
+//HEADINGS
+.primary-heading {
+  font-weight: 300;
+  line-height: 7.2rem;
+  font-size: 6.4rem;
+  letter-spacing: -0.8px;
+}
+
+.secondary-heading {
+  font-weight: 700;
+  line-height: 5.6rem;
+  font-size: 4rem;
+  letter-spacing: -0.5px;
+}
+
+.tertiary-heading-large {
+  font-weight: light;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.22px;
+}
+
+.tertiary-heading-small {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  letter-spacing: 2px;
+}
+
+//BODY TEXT
+.body-text-1 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  letter-spacing: -0.22px;
+}
+
+.body-text-2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.19px;
+}
