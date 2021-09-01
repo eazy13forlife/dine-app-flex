@@ -1,5 +1,5 @@
 .About {
-  height: 140rem;
+  height: 120rem;
   display: grid;
   grid-template-columns:
     [full-start] 15rem [center-start] repeat(
@@ -10,6 +10,7 @@
     15rem [full-end];
   grid-column-gap: 3rem;
   grid-template-rows: repeat(2, 1fr);
+
   &__rectangle {
     width: 89.5rem;
     height: 32rem;
@@ -30,21 +31,22 @@
   &__image {
     box-shadow: 0rem 5rem 10rem -3rem grey;
     &--farm {
-      height: 100%;
-      grid-column: center-start/ col-end 6;
+      width: 100%;
+      grid-column: center-start/ col-end 5;
       grid-row: 1 / 2;
       transform: translateY(-4rem);
       object-fit: cover;
     }
     &--chef {
-      height: 100%;
-      grid-column: col-start 7 / center-end;
+      width: 100%;
+      grid-column: col-start 7 / col-end 12;
       grid-row: 2/3;
       object-fit: cover;
+      align-self: end;
     }
   }
   &__description-card-enjoyable {
-    grid-column: col-start 8 / center-end;
+    grid-column: col-start 7 / col-end 12;
     grid-row: 1/2;
     align-self: center;
   }
@@ -57,6 +59,6 @@
     grid-column: center-end / full-end;
     align-self: center;
     grid-row: 2/3;
-    transform: translateX(-8rem) translateY(3rem);
+    transform: translateX(-5rem) translateY(3rem);
   }
 }
