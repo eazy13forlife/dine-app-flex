@@ -3,6 +3,7 @@ import React from "react";
 import enjoyableDesktop from "../../../images/homepage/enjoyable-place-desktop.jpg";
 import locallySourced from "../../../images/homepage/locally-sourced-desktop.jpg";
 import DescriptionCard from "../../DescriptionCard/DescriptionCard.js";
+import Hamburger from "../../Hamburger/Hamburger.js";
 import "./About.scss";
 
 const About = () => {
@@ -29,6 +30,12 @@ const About = () => {
           src={locallySourced}
           alt="A chef adding the finishing touches to a dish"
           className="About__image About__image--chef"
+        />
+        <Hamburger
+          number={6}
+          width="16rem"
+          height="6px"
+          className="About__hamburger"
         />
       </div>
       <div className="About__rectangle About__rectangle--left-curved"></div>

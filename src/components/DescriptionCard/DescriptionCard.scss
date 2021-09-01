@@ -1,6 +1,7 @@
 .DescriptionCard {
   display: grid;
-  grid-row-gap: 3rem;
+  grid-template-rows: 7rem min-content min-content;
+  grid-row-gap: 2rem;
   &__shape {
     display: flex;
     align-items: center;
