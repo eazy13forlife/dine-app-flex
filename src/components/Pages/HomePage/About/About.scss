@@ -1,0 +1,81 @@
+@use "../../../../styles/abstracts";
+
+.About {
+  height: 120rem;
+  display: grid;
+  grid-template-columns:
+    [full-start] 15rem [center-start] repeat(12, [col-start] 1fr [col-end])
+    [center-end]
+    15rem [full-end];
+  grid-column-gap: 3rem;
+  grid-template-rows: repeat(2, 1fr);
+
+  @include abstracts.respondMax(900px) {
+    grid-column-gap: 4rem;
+    height: 110rem;
+  }
+  &__rectangle-right {
+    grid-column: full-start/col-end 8;
+    grid-row: 1/2;
+  }
+  &__rectangle-left {
+    grid-column: col-start 5 / full-end;
+    grid-row: 2/3;
+    align-self: end;
+  }
+
+  &__image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    &--farm {
+      box-shadow: 0rem 5rem 10rem -3rem grey;
+      grid-column: center-start/ col-end 5;
+      grid-row: 1 / 2;
+      transform: translateY(-4rem);
+      @include abstracts.respondMax(1200px) {
+        grid-column: full-start/col-end 4;
+        max-width: 95%;
+        margin-left: 9rem;
+      }
+      @include abstracts.respondMax(950px) {
+        transform: translateY(0rem);
+      }
+    }
+    &--chef {
+      box-shadow: 0rem -5rem 10rem -8rem grey;
+      grid-column: col-start 7 / center-end;
+      grid-row: 2/3;
+      align-self: end;
+      transform: translateY(5rem);
+      @include abstracts.respondMax(1200px) {
+        grid-column: col-start 7 / full-end;
+        padding-right: 8rem;
+      }
+    }
+  }
+  &__description-card-enjoyable {
+    grid-column: col-start 7 / col-end 12;
+    grid-row: 1/2;
+    align-self: center;
+    @include abstracts.respondMax(1100px) {
+      grid-column: col-start 7 / full-end;
+      padding-right: 8rem;
+    }
+  }
+  &__description-card-local {
+    grid-column: center-start / col-end 5;
+    grid-row: 2/3;
+    align-self: center;
+    @include abstracts.respondMax(1100px) {
+      grid-column: full-start / col-end 5;
+      padding-left: 8rem;
+    }
+  }
+  &__hamburger {
+    grid-column: center-end / full-end;
+    align-self: center;
+    grid-row: 2/3;
+    transform: translateX(-5rem) translateY(3rem);
+  }
+}

@@ -1,0 +1,17 @@
+.Events {
+  height: 100rem;
+  display: grid;
+  grid-template-columns:
+    [full-start] 8rem [center-start]repeat(12, [col-start] 1fr [col-end])
+    [center-end] 8rem[full-end];
+  position: relative;
+  &__rectangle-right {
+    grid-column: full-start / col-end 2;
+    grid-row: 1/2;
+  }
+  .EventCard {
+    grid-column: center-start/center-end;
+    grid-row: 1/2;
+    align-self: center;
+  }
+}

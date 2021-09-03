@@ -1,0 +1,47 @@
+@use "../../../../styles/abstracts";
+
+.Menu {
+  background-color: var(--dark);
+  padding: 20rem 15rem 10rem 15rem;
+  display: grid;
+  grid-template-columns:
+    [center-start] repeat(12, [col-start] 1fr [col-end])
+    [center-end];
+  grid-column-gap: 3rem;
+  grid-template-rows: repeat(3, min-content);
+  @include abstracts.respondMax(1000px) {
+    padding: 15rem 7rem 10rem 7rem;
+  }
+
+  &__description-card {
+    grid-column: center-start/col-end 5;
+    grid-row: 1/3;
+    @include abstracts.respondMax(1000px) {
+      grid-column: center-start/col-end 5;
+    }
+  }
+  &__salmon {
+    grid-column: col-start 7 / center-end;
+    grid-row: 1/2;
+    border-bottom: 1px solid var(--primary-color-1);
+    @include abstracts.respondMax(1000px) {
+      grid-column: col-start 7 / center-end;
+    }
+  }
+  &__filet {
+    grid-column: col-start 7 / center-end;
+    grid-row: 2/3;
+    border-bottom: 1px solid var(--primary-color-1);
+    @include abstracts.respondMax(1000px) {
+      grid-column: col-start 7 / center-end;
+    }
+  }
+  &__mousse {
+    grid-column: col-start 7 / center-end;
+    grid-row: 3/4;
+    padding-top: 4rem;
+    @include abstracts.respondMax(1000px) {
+      grid-column: col-start 7 / center-end;
+    }
+  }
+}

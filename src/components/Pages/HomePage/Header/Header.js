@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as DineLogo } from "../../../images/logo.svg";
+import { ReactComponent as DineLogo } from "../../../../images/logo.svg";
 import "./Header.scss";
 
 const Header = () => {
