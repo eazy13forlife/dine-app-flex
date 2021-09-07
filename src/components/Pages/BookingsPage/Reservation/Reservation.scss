@@ -1,0 +1,22 @@
+.Reservation {
+  display: grid;
+  grid-template-columns:
+    [full-start] 15rem [center-start] repeat(12, [col-start]1fr [col-end])
+    [center-end] 15rem[full-end];
+  grid-template-rows: min-content;
+  &__rectangle {
+    grid-column: full-start/col-end 8;
+    grid-row: 1/2;
+  }
+  &__hamburger {
+    grid-column: col-start 6 / col-end 8;
+    grid-row: 1/2;
+    align-self: end;
+    margin-bottom: 10rem;
+  }
+  .ReservationForm {
+    grid-column: col-start 7 / col-end 12;
+    grid-row: 1/2;
+    transform: translatey(-13rem);
+  }
+}

@@ -1,0 +1,41 @@
+.ReservationForm {
+  width: 100%;
+  padding: 4rem;
+  background-color: var(--light);
+  box-shadow: 0rem 14rem 14rem -8rem lightgrey;
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__header {
+    width: 35%;
+  }
+  &__input {
+    border: none;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--dark);
+    font-family: "Spartan", sans-serif;
+    font-weight: light;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    letter-spacing: -0.22px;
+    &:focus {
+      outline: none;
+    }
+    &--large {
+      width: 100%;
+    }
+    &--small {
+      width: 20%;
+      margin-left: 1rem;
+      text-align: center;
+    }
+  }
+  &__button {
+    width: 100%;
+  }
+}

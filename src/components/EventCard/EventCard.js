@@ -3,13 +3,14 @@ import React, { useState } from "react";
 import "./EventCard.scss";
 
 const EventCard = ({ image, heading, bodyText, onOptionClick, selected }) => {
-  const renderListClass = () => {
-    if (selected === "Family Gatherings") {
+  const renderListClass = (name) => {
+    if (heading === name) {
       return "EventCard__list-item--selected";
     } else {
-      return null;
+      return "";
     }
   };
+
   return (
     <div className="EventCard">
       <img src={image} alt={heading} className="EventCard__image" />
@@ -21,7 +22,9 @@ const EventCard = ({ image, heading, bodyText, onOptionClick, selected }) => {
 
       <ul className="EventCard__list">
         <li
-          className={`EventCard__list-item ${renderListClass()}`}
+          className={`EventCard__list-item ${renderListClass(
+            "Family Gatherings"
+          )}`}
           onClick={() => {
             onOptionClick("Family Gatherings");
           }}
@@ -29,7 +32,9 @@ const EventCard = ({ image, heading, bodyText, onOptionClick, selected }) => {
           <h3 className="tertiary-heading-small">Family Gatherings</h3>
         </li>
         <li
-          className={`EventCard__list-item ${renderListClass()}`}
+          className={`EventCard__list-item ${renderListClass(
+            "Special Events"
+          )}`}
           onClick={() => {
             onOptionClick("Special Events");
           }}
@@ -37,7 +42,7 @@ const EventCard = ({ image, heading, bodyText, onOptionClick, selected }) => {
           <h3 className="tertiary-heading-small">Special Events</h3>
         </li>
         <li
-          className={`EventCard__list-item ${renderListClass()}`}
+          className={`EventCard__list-item ${renderListClass("Social Events")}`}
           onClick={() => {
             onOptionClick("Social Events");
           }}

@@ -1,0 +1,23 @@
+.Reservations-Hero {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr min-content 1fr;
+  grid-row-gap: 5rem;
+  padding: 0rem 16rem;
+  background-image: url("../../../../images/booking/hero-bg-desktop@2x.jpg");
+  height: 60rem;
+  color: var(--light);
+  background-size: cover;
+  &__logo {
+    grid-row: 1/2;
+    margin-top: 6.5rem;
+  }
+  &__heading {
+    grid-column: 1/6;
+    grid-row: 2/3;
+  }
+  &__text {
+    grid-column: 1/6;
+    grid-row: 3/4;
+  }
+}

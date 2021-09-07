@@ -1,0 +1,18 @@
+.Booking {
+  background-image: url("../../../../images/homepage/ready-bg-desktop.jpg");
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
+  grid-column-gap: 3rem;
+  padding: 5rem 16rem;
+  justify-content: center;
+  color: white;
+  &__heading {
+    grid-column: col-start 1 / col-end 8;
+  }
+  &__button {
+    grid-column: col-start 9 / col-end 12;
+    justify-self: start;
+    align-self: start;
+  }
+}

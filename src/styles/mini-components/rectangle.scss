@@ -5,11 +5,11 @@
   z-index: -1;
   &--right-curved {
     border-top-right-radius: 10rem;
-    grid-row: 1/2;
   }
   &--left-curved {
     border-top-left-radius: 10rem;
-    grid-row: 2/3;
-    align-self: end;
+  }
+  &--bottom-right-curved {
+    border-bottom-right-radius: 10rem;
   }
 }

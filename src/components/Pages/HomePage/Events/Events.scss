@@ -2,8 +2,8 @@
   height: 100rem;
   display: grid;
   grid-template-columns:
-    [full-start] 8rem [center-start]repeat(12, [col-start] 1fr [col-end])
-    [center-end] 8rem[full-end];
+    [full-start] 15rem [center-start]repeat(12, [col-start] 1fr [col-end])
+    [center-end] 15rem[full-end];
   position: relative;
   &__rectangle-right {
     grid-column: full-start / col-end 2;
