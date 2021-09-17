@@ -1,0 +1,15 @@
+.PeopleCounter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--dark);
+  &__icon-wrapper {
+    padding: 1rem 1rem;
+    cursor: pointer;
+    &:active .PeopleCounter__icon {
+      transform: translateY(0.3rem);
+    }
+  }
+}

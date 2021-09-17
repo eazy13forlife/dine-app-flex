@@ -10,7 +10,6 @@ const BookingPage = () => {
     <div className="ReservationsPage">
       <Hero />
       <Reservation />
-      <Dropdown values={[3, 4, 5]} />
     </div>
   );
 };

@@ -7,18 +7,28 @@
   width: 20%;
   margin-left: 1rem;
   position: relative;
+  cursor: pointer;
+  z-index: 10;
   &__screen {
-    text-align: center;
+    display: flex;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--dark);
+    position: relative;
+  }
+  &__selection {
+    margin-left: 0.5rem;
+  }
+  &__icon-wrapper {
+    position: absolute;
+    height: 100%;
+    right: 10%;
+    padding: 0rem 0.2rem;
   }
   &__arrow-icon {
-    margin-left: 2rem;
     &--rotated {
       transform: rotate(-180deg);
     }
   }
-
   &__list {
     padding: 1rem;
     list-style-type: none;

@@ -1,12 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { useField, Formik, Form, ErrorMessage } from "formik";
-import Dropdown from "../Dropdown/Dropdown.js";
-import userSchema from "./validations.js";
+import { useField, Formik, Form, ErrorMessage, Field } from "formik";
 
 import { ReactComponent as IconMinus } from "../../images/icons/icon-minus.svg";
 import { ReactComponent as IconPlus } from "../../images/icons/icon-plus.svg";
+
+import Dropdown from "../Dropdown/Dropdown.js";
+import userSchema from "./validations.js";
+import PeopleCounter from "../PeopleCounter/PeopleCounter.js";
 import "./ReservationForm.scss";
 
+/*
+const validate = (values) => {
+  const errors = {};
+
+  if (values.date.month.length > 2) {
+    errors.date = {};
+    errors.date.month = "Too many";
+  }
+
+  return errors;
+};*/
 const initialValues = {
   name: "",
   email: "",
@@ -25,13 +38,26 @@ const initialValues = {
 
 const TextInput = (props) => {
   const [field, meta] = useField(props);
+  console.log(meta);
   return (
-    <>
-      <input className={props.className} {...props} {...field} />
+    <div
+      className={`${
+        props.classes.includes("ReservationForm__input--small")
+          ? "ReservationForm__input-wrapper--small"
+          : "ReservationForm__input-wrapper--large"
+      }`}
+    >
+      <input
+        className={`${props.classes} ${
+          meta.touched && meta.error ? "ReservationForm__input--error" : null
+        }`}
+        {...props}
+        {...field}
+      />
       {meta.touched && meta.error ? (
-        <span className="Form__error">{meta.error}</span>
+        <div className={`ReservationForm__error`}>{meta.error}</div>
       ) : null}
-    </>
+    </div>
   );
 };
 
@@ -54,7 +80,7 @@ const ReservationForm = () => {
             name="name"
             type="text"
             placeholder="Name"
-            className="ReservationForm__input ReservationForm__input--large"
+            classes="ReservationForm__input ReservationForm__input--large"
           />
         </div>
 
@@ -63,7 +89,7 @@ const ReservationForm = () => {
             name="email"
             type="text"
             placeholder="Email"
-            className="ReservationForm__input ReservationForm__input--large"
+            classes="ReservationForm__input ReservationForm__input--large"
           />
         </div>
 
@@ -73,19 +99,22 @@ const ReservationForm = () => {
             name="date.month"
             type="text"
             placeholder="MM"
-            className="ReservationForm__input ReservationForm__input--small"
+            classes="ReservationForm__input ReservationForm__input--small"
+            maxLength={2}
           />
           <TextInput
             name="date.day"
             type="text"
             placeholder="DD"
-            className="ReservationForm__input ReservationForm__input--small"
+            classes="ReservationForm__input ReservationForm__input--small"
+            maxLength={2}
           />
           <TextInput
             name="date.year"
             type="text"
             placeholder="YYYY"
-            className="ReservationForm__input ReservationForm__input--small"
+            classes="ReservationForm__input ReservationForm__input--small"
+            maxLength={4}
           />
         </div>
 
@@ -95,23 +124,30 @@ const ReservationForm = () => {
             name="time.hour"
             type="text"
             placeholder="09"
-            className="ReservationForm__input ReservationForm__input--small"
+            classes="ReservationForm__input ReservationForm__input--small"
+            maxLength={2}
           />
           <TextInput
             name="time.minutes"
             type="text"
             placeholder="00"
-            className="ReservationForm__input ReservationForm__input--small"
+            classes="ReservationForm__input ReservationForm__input--small"
+            maxLength={2}
           />
-          <Dropdown name="time.unit" values={["PM", "AM"]} />
+          <Field
+            name="time.unit"
+            values={["PM", "AM"]}
+            initialValue="PM"
+            component={Dropdown}
+          />
         </div>
 
         <div className="ReservationForm__group">
-          <IconMinus className="ReservationForm__icon Reservationform__icon-minus" />
-          <h3 className="tertiary-heading-large ReservationForm__people">
-            3 people
-          </h3>
-          <IconPlus className="ReservationForm__icon Reservationform__icon-plus" />
+          <Field
+            name="numberOfPeople"
+            initialValue={1}
+            component={PeopleCounter}
+          />
         </div>
 
         <div className="ReservationForm__group">

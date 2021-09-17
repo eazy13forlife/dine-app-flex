@@ -4,11 +4,12 @@ import { ReactComponent as CheckmarkIcon } from "../../images/icons/icon-check.s
 import "./Dropdown.scss";
 
 //the props object contains field,form and meta ad everything else we passed in. so we just get the field and form by itself
-const Dropdown = ({ field, form, ...props }) => {
+const Dropdown = ({ field, form, ...pizza }) => {
+  console.log(pizza);
   const dropdownRef = useRef();
 
   const [viewDropdown, setViewDropdown] = useState(false);
-  const [selected, setSelected] = useState(props.initialValue);
+  const [selected, setSelected] = useState("PM");
 
   useEffect(() => {
     const closeDropdown = (e) => {
@@ -31,11 +32,10 @@ const Dropdown = ({ field, form, ...props }) => {
 
   const onItemClick = (value) => {
     setSelected(value);
-    form.setFieldValue(field.name, value);
     setViewDropdown(false);
   };
 
-  const renderedListItems = props.values.map((value, index) => {
+  const renderedListItems = values.map((value, index) => {
     return (
       <li
         className="Dropdown__item"
@@ -56,13 +56,12 @@ const Dropdown = ({ field, form, ...props }) => {
     <div className="Dropdown" ref={dropdownRef}>
       <div className="Dropdown__screen">
         <span className="Dropdown__selection">{selected}</span>
-        <div className="Dropdown__icon-wrapper" onClick={onArrowClick}>
-          <ArrowIcon
-            className={`Dropdown__arrow-icon ${
-              viewDropdown ? "Dropdown__arrow-icon--rotated" : null
-            } `}
-          />
-        </div>
+        <ArrowIcon
+          className={`Dropdown__arrow-icon ${
+            viewDropdown ? "Dropdown__arrow-icon--rotated" : null
+          } `}
+          onClick={onArrowClick}
+        />
       </div>
       <ul
         className={`Dropdown__list ${
