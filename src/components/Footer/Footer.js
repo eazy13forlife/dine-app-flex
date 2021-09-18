@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="Footer">
       <DineLogo className="Footer__logo" />
       <address className="Footer__address">
-        <h3 className="tertiary-heading-small">
+        <h3 className="tertiary-heading-small-footer">
           marthwaite,sedbergh
           <br />
           cumbria
@@ -17,7 +17,7 @@ const Footer = () => {
         </h3>
       </address>
       <div className="Footer__hours">
-        <h3 className="tertiary-heading-small">
+        <h3 className="tertiary-heading-small-footer">
           Open times
           <br /> Mon-fru:09:00Am -10:00PM
           <br /> Sat-Sun:09:00Am-11:30pm

@@ -1,3 +1,5 @@
+@use "../../../../styles/abstracts";
+
 .Booking {
   background-image: url("../../../../images/homepage/ready-bg-desktop.jpg");
   background-size: cover;
@@ -7,6 +9,9 @@
   padding: 5rem 16rem;
   justify-content: center;
   color: white;
+  @include abstracts.respondMax(1000px) {
+    padding: 5rem 8rem;
+  }
   &__heading {
     grid-column: col-start 1 / col-end 8;
   }

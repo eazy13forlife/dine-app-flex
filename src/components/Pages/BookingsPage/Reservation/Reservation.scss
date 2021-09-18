@@ -1,22 +1,62 @@
+@use "../../../../styles/abstracts";
+
 .Reservation {
   height: 32rem;
   display: grid;
   grid-template-columns:
-    [full-start] 15rem [center-start] repeat(12, [col-start]1fr [col-end])
+    [full-start] 15rem [center-start] repeat(12, [col-start] 1fr [col-end])
     [center-end] 15rem[full-end];
+  @include abstracts.respondMax(1000px) {
+    height: auto;
+  }
+  @include abstracts.respondMax(730px) {
+    grid-template-columns:
+      [full-start] 10rem [center-start] repeat(12, [col-start]1fr [col-end])
+      [center-end] 10rem[full-end];
+  }
+  @include abstracts.respondMax(650px) {
+    grid-template-columns:
+      [full-start] 8rem [center-start] repeat(12, [col-start]1fr [col-end])
+      [center-end] 8rem[full-end];
+  }
+  @include abstracts.respondMax(550px) {
+    grid-template-columns:
+      [full-start] 2rem [center-start] repeat(12, [col-start]1fr [col-end])
+      [center-end] 2rem[full-end];
+  }
   &__rectangle {
     grid-column: full-start/col-end 8;
     grid-row: 1/2;
+    @include abstracts.respondMax(1250px) {
+      grid-column: full-start/col-end 10;
+    }
+    @include abstracts.respondMax(1000px) {
+      grid-column: full-start/col-end 7;
+    }
   }
   &__hamburger {
     grid-column: col-start 6 / col-end 8;
     grid-row: 1/2;
     align-self: end;
     margin-bottom: 29rem;
+    @include abstracts.respondMax(1000px) {
+      grid-column: col-start 3 / col-end 5;
+      align-self: start;
+      margin-bottom: 0rem;
+      transform: translatex(0rem) translatey(0rem);
+    }
   }
   .ReservationForm {
     grid-column: col-start 7 / col-end 12;
     grid-row: 1/2;
-    transform: translatex(2rem) translatey(-32rem);
+    transform: translatex(-2rem) translatey(-32rem);
+    @include abstracts.respondMax(1250px) {
+      transform: translatex(4rem) translatey(-32rem);
+    }
+    @include abstracts.respondMax(1000px) {
+      width: 90%;
+      grid-column: col-start 5 / full-end;
+      transform: translatex(0rem) translatey(3rem);
+    }
   }
 }

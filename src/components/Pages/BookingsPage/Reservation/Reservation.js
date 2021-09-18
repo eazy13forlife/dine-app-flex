@@ -7,7 +7,7 @@ import "./Reservation.scss";
 const Reservation = () => {
   return (
     <div className="Reservation">
-      <div className="rectangle rectangle--bottom-right-curved Reservation__rectangle"></div>
+      <div className="rectangle rectangle--top-right-curved Reservation__rectangle"></div>
       <Hamburger
         number={6}
         width="16rem"

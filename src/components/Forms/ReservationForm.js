@@ -36,7 +36,7 @@ const initialValues = {
 
 const TextInput = (props) => {
   const [field, meta] = useField(props);
-  console.log(meta);
+
   return (
     <div
       className={`${

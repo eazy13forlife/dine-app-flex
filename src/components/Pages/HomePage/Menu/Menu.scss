@@ -10,7 +10,7 @@
   grid-column-gap: 3rem;
   grid-template-rows: repeat(3, min-content);
   @include abstracts.respondMax(1000px) {
-    padding: 15rem 7rem 10rem 7rem;
+    padding: 15rem 8rem 10rem 8rem;
   }
 
   &__description-card {

@@ -23,12 +23,13 @@ const checkValidMonth = (value) => {
 };
 
 const checkValidDay = (value, context) => {
-  console.log(context);
   if (!checkValidNumber(value)) {
     return false;
   }
+
   const { parent } = context;
   const number = +value;
+
   switch (parent.month) {
     case "01":
     case "03":

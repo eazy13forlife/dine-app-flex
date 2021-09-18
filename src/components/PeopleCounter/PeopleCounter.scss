@@ -12,4 +12,10 @@
       transform: translateY(0.3rem);
     }
   }
+  &__icon-minus {
+    transform: scale(1.5);
+  }
+  &__icon-plus {
+    transform: scale(1.5);
+  }
 }

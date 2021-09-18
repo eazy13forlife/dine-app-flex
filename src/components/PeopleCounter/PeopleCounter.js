@@ -4,7 +4,6 @@ import { ReactComponent as IconPlus } from "../../images/icons/icon-plus.svg";
 import "./PeopleCounter.scss";
 
 const PeopleCounter = ({ field, form, ...props }) => {
-  console.log(field.value);
   const [people, setPeople] = useState(props.initialValue);
 
   const decrementPeople = () => {

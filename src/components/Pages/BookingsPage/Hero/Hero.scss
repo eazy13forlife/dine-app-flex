@@ -1,3 +1,5 @@
+@use "../../../../styles/abstracts";
+
 .Reservations-Hero {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -8,12 +10,18 @@
   height: 60rem;
   color: var(--light);
   background-size: cover;
+  @include abstracts.respondMax(1150px) {
+    padding: 0rem 10rem;
+  }
+  @include abstracts.respondMax(1000px) {
+    padding: 0rem 8rem;
+  }
   &__logo {
     grid-row: 1/2;
     margin-top: 6.5rem;
   }
   &__heading {
-    grid-column: 1/6;
+    grid-column: 1/5;
     grid-row: 2/3;
   }
   &__text {

@@ -44,10 +44,12 @@ const Dropdown = ({ field, form, ...props }) => {
           onItemClick(value);
         }}
       >
-        {selected === value ? (
-          <CheckmarkIcon className="Dropdown__checkmark-icon" />
-        ) : null}
-        <span className="Dropdown__value">{value}</span>
+        <div className="Dropdown__value">
+          {selected === value ? (
+            <CheckmarkIcon className="Dropdown__checkmark-icon" />
+          ) : null}
+          {value}
+        </div>
       </li>
     );
   });

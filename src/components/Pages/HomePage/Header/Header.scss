@@ -1,3 +1,5 @@
+@use "../../../../styles/abstracts";
+
 .Header {
   background-image: url("../../../../images/homepage/hero-bg-desktop@2x.jpg");
   background-size: cover;
@@ -18,6 +20,10 @@
     grid-column: center-start / col-end 6;
     grid-template-rows: 20rem auto auto 1fr;
     grid-row-gap: 3.5rem;
+    @include abstracts.respondMax(1000px) {
+      grid-column: full-start/col-end 6;
+      padding-left: 9rem;
+    }
   }
   &__logo {
     margin-top: 6.5rem;
