@@ -1,5 +1,8 @@
 import React from "react";
 import { ReactComponent as DineLogo } from "../../../../images/logo.svg";
+import history from "../../../../history.js";
+
+import LightButton from "../../../Buttons/LightButton.js";
 import "./Header.scss";
 
 const Header = () => {
@@ -14,9 +17,13 @@ const Header = () => {
           Experience our seasonal menu in beautiful country surroundings. Eat
           the freshest produce from the comfort of our farmhouse
         </p>
-        <button className="button button--light Header__button">
-          Book a table
-        </button>
+        <LightButton
+          text="Book a table"
+          additionalClass="Header__button"
+          onButtonClick={() => {
+            history.push("/bookings");
+          }}
+        />
       </div>
     </header>
   );

@@ -1,9 +1,9 @@
 .Reservation {
+  height: 32rem;
   display: grid;
   grid-template-columns:
     [full-start] 15rem [center-start] repeat(12, [col-start]1fr [col-end])
     [center-end] 15rem[full-end];
-  grid-template-rows: min-content;
   &__rectangle {
     grid-column: full-start/col-end 8;
     grid-row: 1/2;
@@ -12,11 +12,11 @@
     grid-column: col-start 6 / col-end 8;
     grid-row: 1/2;
     align-self: end;
-    margin-bottom: 10rem;
+    margin-bottom: 29rem;
   }
   .ReservationForm {
     grid-column: col-start 7 / col-end 12;
     grid-row: 1/2;
-    transform: translatey(-13rem);
+    transform: translatex(2rem) translatey(-32rem);
   }
 }

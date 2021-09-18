@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import Hamburger from "../../../Hamburger/Hamburger.js";
 import ReservationForm from "../../../Forms/ReservationForm.js";

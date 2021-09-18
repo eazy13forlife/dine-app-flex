@@ -23,6 +23,7 @@ const checkValidMonth = (value) => {
 };
 
 const checkValidDay = (value, context) => {
+  console.log(context);
   if (!checkValidNumber(value)) {
     return false;
   }

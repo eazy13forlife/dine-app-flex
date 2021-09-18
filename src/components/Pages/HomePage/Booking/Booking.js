@@ -1,5 +1,7 @@
 import React from "react";
 
+import LightButton from "../../../Buttons/LightButton.js";
+import history from "../../../../history.js";
 import "./Booking.scss";
 
 const Booking = () => {
@@ -8,9 +10,13 @@ const Booking = () => {
       <h2 className="secondary-heading Booking_heading">
         Ready to make a reservation?
       </h2>
-      <button className="button button--light Booking__button">
-        Book a table
-      </button>
+      <LightButton
+        text="Book a table"
+        additionalClass="Booking__button"
+        onButtonClick={() => {
+          history.push("/bookings");
+        }}
+      />
     </div>
   );
 };

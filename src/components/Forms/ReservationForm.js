@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useField, Formik, Form, ErrorMessage, Field } from "formik";
 
-import { ReactComponent as IconMinus } from "../../images/icons/icon-minus.svg";
-import { ReactComponent as IconPlus } from "../../images/icons/icon-plus.svg";
-
+import DarkButton from "../Buttons/DarkButton.js";
 import Dropdown from "../Dropdown/Dropdown.js";
 import userSchema from "./validations.js";
 import PeopleCounter from "../PeopleCounter/PeopleCounter.js";
@@ -151,12 +149,11 @@ const ReservationForm = () => {
         </div>
 
         <div className="ReservationForm__group">
-          <button
+          <DarkButton
+            text="Make reservation"
+            additionalClass="ReservationForm__button"
             type="submit"
-            className="button button--dark ReservationForm__button"
-          >
-            Make reservation
-          </button>
+          />
         </div>
       </Form>
     </Formik>

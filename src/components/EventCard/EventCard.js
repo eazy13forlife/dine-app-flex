@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import DarkButton from "../Buttons/DarkButton.js";
+import history from "../../history.js";
 import "./EventCard.scss";
 
 const EventCard = ({ image, heading, bodyText, onOptionClick, selected }) => {
@@ -16,10 +18,13 @@ const EventCard = ({ image, heading, bodyText, onOptionClick, selected }) => {
       <img src={image} alt={heading} className="EventCard__image" />
       <h2 className="secondary-heading EventCard__heading">{heading}</h2>
       <div className="body-text-1 EventCard__description">{bodyText}</div>
-      <button className="button button--dark EventCard__button">
-        Book a table
-      </button>
-
+      <DarkButton
+        text="Book a table"
+        additionalClass="EventCard__button"
+        onButtonClick={() => {
+          history.push("/bookings");
+        }}
+      />
       <ul className="EventCard__list">
         <li
           className={`EventCard__list-item ${renderListClass(
