@@ -14,6 +14,11 @@
     )
     [center-end] 16.5rem [full-end];
   grid-column-gap: 3rem;
+  @include abstracts.respondMax(768px) {
+    background-image: url("../../../../images/homepage/hero-bg-tablet@2x.jpg");
+    align-content: center;
+    background-size: cover;
+  }
 
   &__content {
     display: grid;
