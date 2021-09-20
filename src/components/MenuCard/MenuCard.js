@@ -9,9 +9,10 @@ const MenuCard = ({ image, heading, bodyText, className }) => {
         <img src={image} alt={heading} className="MenuCard__image" />
         <div className="MenuCard__image-line"></div>
       </figure>
-
-      <h3 className="tertiary-heading-large MenuCard__heading">{heading}</h3>
-      <p className="body-text-2 MenuCard__text">{bodyText}</p>
+      <div className="MenuCard__item-description">
+        <h3 className="tertiary-heading-large MenuCard__heading">{heading}</h3>
+        <p className="body-text-2 MenuCard__text">{bodyText}</p>
+      </div>
     </div>
   );
 };

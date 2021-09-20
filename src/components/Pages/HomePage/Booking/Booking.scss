@@ -3,21 +3,24 @@
 .Booking {
   background-image: url("../../../../images/homepage/ready-bg-desktop.jpg");
   background-size: cover;
-  display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
-  grid-column-gap: 3rem;
-  padding: 5rem 16rem;
-  justify-content: center;
-  color: white;
-  @include abstracts.respondMax(1000px) {
-    padding: 5rem 8rem;
+  padding: 8rem 8rem;
+  display: flex;
+  color: var(--light);
+  @include abstracts.respondMax(abstracts.$breakpoint-large) {
+    padding: 8rem 5rem;
+  }
+  @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+    padding: 5rem 5rem;
+    flex-direction: column;
+    align-items: center;
   }
   &__heading {
-    grid-column: col-start 1 / col-end 8;
+    flex: 0 0 70%;
+    margin-right: 2rem;
+    @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      margin-bottom: 4rem;
+    }
   }
   &__button {
-    grid-column: col-start 9 / col-end 12;
-    justify-self: start;
-    align-self: start;
   }
 }

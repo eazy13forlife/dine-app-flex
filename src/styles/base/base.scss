@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 :root {
   --primary-color-1: #9e7f66;
   --primary-color-2: #111111;
@@ -11,9 +13,18 @@
   --inactive: #979797;
 
   --error: #b54949;
+
+  //margins
+  --margin-regular: 3rem;
+
+  //box-shadow
+  --primary-box-shadow: 0px 2rem 6rem -2rem black;
 }
 html {
   font-size: 62.5%;
+  @include abstracts.respondMax(900px) {
+    font-size: 56.25%;
+  }
 }
 
 *,

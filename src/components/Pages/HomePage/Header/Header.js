@@ -8,8 +8,11 @@ import "./Header.scss";
 const Header = () => {
   return (
     <header className="Header">
-      <div className="Header__content">
+      <div className="Header__svg-container">
         <DineLogo className="Header__logo" />
+      </div>
+
+      <div className="Header__content">
         <h1 className="primary-heading Header__heading">
           Exquisite dining since 1989
         </h1>

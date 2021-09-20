@@ -1,81 +1,102 @@
 @use "../../../../styles/abstracts";
 
 .About {
-  height: 120rem;
-  display: grid;
-  grid-template-columns:
-    [full-start] 15rem [center-start] repeat(12, [col-start] 1fr [col-end])
-    [center-end]
-    15rem [full-end];
-  grid-column-gap: 3rem;
-  grid-template-rows: repeat(2, 1fr);
-
-  @include abstracts.respondMax(900px) {
-    grid-column-gap: 4rem;
-    height: 110rem;
+  padding: 0rem 10rem;
+  position: relative;
+  @include abstracts.respondMax(abstracts.$breakpoint-large) {
+    padding: 5rem 7rem;
   }
-  &__rectangle-right {
-    grid-column: full-start/col-end 8;
-    grid-row: 1/2;
-  }
-  &__rectangle-left {
-    grid-column: col-start 5 / full-end;
-    grid-row: 2/3;
-    align-self: end;
-  }
-
-  &__image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    &--farm {
-      box-shadow: 0rem 5rem 10rem -3rem grey;
-      grid-column: center-start/ col-end 5;
-      grid-row: 1 / 2;
-      transform: translateY(-4rem);
-      @include abstracts.respondMax(1200px) {
-        grid-column: full-start/col-end 4;
-        max-width: 95%;
-        margin-left: 9rem;
+  &__flex-container {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      @include abstracts.respondMax(abstracts.$breakpoint-large) {
+        margin-bottom: 8rem;
       }
-      @include abstracts.respondMax(950px) {
-        transform: translateY(0rem);
+      @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+        margin-bottom: 0rem;
       }
     }
-    &--chef {
-      box-shadow: 0rem -5rem 10rem -8rem grey;
-      grid-column: col-start 7 / center-end;
-      grid-row: 2/3;
-      align-self: end;
-      transform: translateY(5rem);
-      @include abstracts.respondMax(1200px) {
-        grid-column: col-start 7 / full-end;
-        padding-right: 8rem;
-      }
+    @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__enjoyable-place {
+    transform: translatey(-4rem);
+    @include abstracts.respondMax(abstracts.$breakpoint-large) {
+      transform: translatey(0rem);
+    }
+    @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      transform: translatey(-15rem);
+    }
+  }
+  &__rectangle-top-right {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 70%;
+  }
+  &__image-container {
+    flex: 0 0 50%;
+    box-shadow: var(--primary-box-shadow);
+    @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      width: 100%;
+      height: 50rem;
+    }
+  }
+  &__image {
+    width: 100%;
+    display: block;
+    @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      width: 100%;
+      height: 50rem;
+
+      object-fit: cover;
     }
   }
   &__description-card-enjoyable {
-    grid-column: col-start 7 / col-end 12;
-    grid-row: 1/2;
-    align-self: center;
-    @include abstracts.respondMax(1100px) {
-      grid-column: col-start 7 / full-end;
-      padding-right: 8rem;
+    margin-left: 10rem;
+    @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      margin-top: 5rem;
+      margin-left: 0rem;
+      text-align: center;
+    }
+  }
+  .DescriptionCard__shape {
+    @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      margin: 0rem auto var(--margin-regular) auto;
+    }
+  }
+  &__locally-sourced {
+    transform: translatey(8rem);
+    @include abstracts.respondMax(abstracts.$breakpoint-large) {
+      transform: translatey(0rem);
     }
   }
   &__description-card-local {
-    grid-column: center-start / col-end 5;
-    grid-row: 2/3;
-    align-self: center;
-    @include abstracts.respondMax(1100px) {
-      grid-column: full-start / col-end 5;
-      padding-left: 8rem;
+    margin-right: 10rem;
+    @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      margin-top: 5rem;
+      margin-right: 0rem;
+      text-align: center;
+      order: 1;
+    }
+  }
+  &__rectangle-top-left {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 70%;
+    transform: translatey(-100%);
+    @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      top: 100%;
     }
   }
   &__hamburger {
-    grid-column: center-end / full-end;
-    align-self: center;
-    grid-row: 2/3;
-    transform: translateX(-5rem) translateY(3rem);
+    position: absolute;
+    right: 3%;
+    z-index: 2;
+    top: 70%;
   }
 }

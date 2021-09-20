@@ -7,7 +7,7 @@ import "./Booking.scss";
 const Booking = () => {
   return (
     <div className="Booking">
-      <h2 className="secondary-heading Booking_heading">
+      <h2 className="secondary-heading Booking__heading">
         Ready to make a reservation?
       </h2>
       <LightButton

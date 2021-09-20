@@ -4,6 +4,8 @@ import familyGathering from "../../../../images/homepage/family-gathering-deskto
 import socialEvents from "../../../../images/homepage/social-events-desktop.jpg";
 import specialEvents from "../../../../images/homepage/special-events-desktop.jpg";
 import EventCard from "../../../EventCard/EventCard.js";
+import Rectangle from "../../../Rectangle/Rectangle.js";
+
 import "./Events.scss";
 
 const Events = () => {
@@ -46,7 +48,7 @@ const Events = () => {
 
   return (
     <div className="Events">
-      <div className="rectangle rectangle--right-curved Events__rectangle-right"></div>
+      <Rectangle side="top-right" additionalClass="Events__rectangle-right" />
       {renderedEvent()}
     </div>
   );

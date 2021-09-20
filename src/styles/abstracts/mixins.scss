@@ -1,3 +1,6 @@
+$breakpoint-large: 1000px;
+$breakpoint-tablet: 768px;
+
 @mixin respondMax($size) {
   @media (max-width: $size/16px *1em) {
     @content;

@@ -1,10 +1,10 @@
 .DescriptionCard {
-  display: grid;
-  grid-template-rows: 7rem min-content min-content;
-  grid-row-gap: 2rem;
+  display: flex;
+  flex-direction: column;
   &__shape {
     display: flex;
     align-items: center;
+    margin-bottom: var(--margin-regular);
   }
   &__circle {
     height: 7px;
@@ -17,5 +17,8 @@
     height: 1px;
     background-color: var(--primary-color-1);
     margin-left: 0.5rem;
+  }
+  &__heading {
+    margin-bottom: var(--margin-regular);
   }
 }

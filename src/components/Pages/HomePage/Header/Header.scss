@@ -1,40 +1,52 @@
 @use "../../../../styles/abstracts";
-
 .Header {
-  background-image: url("../../../../images/homepage/hero-bg-desktop@2x.jpg");
-  background-size: cover;
-  height: 82rem;
-  grid-column: full-start / full-end;
   color: var(--light);
-  display: grid;
-  grid-template-columns:
-    [full-start] 16.5rem [center-start] repeat(
-      12,
-      [col-start] minmax(min-content, 6.5rem) [col-end]
-    )
-    [center-end] 16.5rem [full-end];
-  grid-column-gap: 3rem;
-  @include abstracts.respondMax(768px) {
-    background-image: url("../../../../images/homepage/hero-bg-tablet@2x.jpg");
-    align-content: center;
-    background-size: cover;
+  padding: 8rem 10rem 15rem 10rem;
+  background-image: linear-gradient(
+      to right,
+      var(--dark) 0%,
+      var(--dark) 30%,
+      transparent 30%
+    ),
+    url("../../../../images/homepage/hero-bg-desktop@2x.jpg");
+  background-size: cover;
+  background-position: 65% 0%;
+  @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+    height: 110rem;
+    padding: 50vw 10rem 20rem 10rem;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 0vw,
+        transparent,
+        45vw,
+        var(--dark) 45vw
+      ),
+      url("../../../../images/homepage/hero-bg-tablet@2x.jpg");
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__svg-container {
+    margin-bottom: 15rem;
+    @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      margin-bottom: 8rem;
+    }
   }
 
   &__content {
-    display: grid;
-    grid-column: center-start / col-end 6;
-    grid-template-rows: 20rem auto auto 1fr;
-    grid-row-gap: 3.5rem;
-    @include abstracts.respondMax(1000px) {
-      grid-column: full-start/col-end 6;
-      padding-left: 9rem;
+    width: 50%;
+    @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      text-align: center;
+      width: 100%;
     }
   }
-  &__logo {
-    margin-top: 6.5rem;
+  &__heading {
+    margin-bottom: var(--margin-regular);
+  }
+  &__text {
+    margin-bottom: var(--margin-regular);
   }
   &__button {
-    justify-self: start;
-    align-self: start;
   }
 }

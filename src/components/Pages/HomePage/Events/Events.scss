@@ -1,24 +1,18 @@
 @use "../../../../styles/abstracts";
 
 .Events {
-  height: 100rem;
-  display: grid;
-  grid-template-columns:
-    [full-start] 15rem [center-start]repeat(12, [col-start] 1fr [col-end])
-    [center-end] 15rem[full-end];
+  padding: 10rem 10rem;
   position: relative;
-
+  @include abstracts.respondMax(abstracts.$breakpoint-large) {
+    padding: 10rem 5rem;
+  }
   &__rectangle-right {
-    grid-column: full-start / col-end 2;
-    grid-row: 1/2;
+    position: absolute;
+    width: 50rem;
+    z-index: -1;
+    left: 0rem;
+    top: 0rem;
   }
   .EventCard {
-    grid-column: center-start/center-end;
-    grid-row: 1/2;
-    align-self: center;
-    @include abstracts.respondMax(1000px) {
-      grid-column: full-start/full-end;
-      padding: 0rem 9rem;
-    }
   }
 }
