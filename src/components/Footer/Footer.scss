@@ -10,7 +10,7 @@
     padding: 8rem 5rem;
   }
 
-  @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+  @include abstracts.respondMax(500px) {
     flex-direction: column;
     padding: 5rem 3rem;
     align-items: center;
@@ -22,7 +22,7 @@
     justify-content: space-between;
     @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
       flex-direction: column;
-      margin-left: 8rem;
+      margin-left: var(--margin-regular);
     }
     @include abstracts.respondMax(abstracts.$breakpoint-phone) {
       margin-left: 0rem;
@@ -30,8 +30,8 @@
   }
   &__logo-container {
     flex: 0 0 30%;
-    @include abstracts.respondMax(abstracts.$breakpoint-phone) {
-      margin-bottom: 5rem;
+    @include abstracts.respondMax(500px) {
+      margin-bottom: var(--margin-large);
     }
   }
   &__logo {
@@ -45,7 +45,7 @@
   &__hours {
     @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
       margin-left: 0rem;
-      margin-top: 6rem;
+      margin-top: var(--margin-large);
     }
   }
 }

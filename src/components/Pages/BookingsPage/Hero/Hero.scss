@@ -20,7 +20,7 @@
     margin-bottom: 10rem;
     @include abstracts.respondMax(abstracts.$breakpoint-phone) {
       text-align: center;
-      margin-bottom: 5rem;
+      margin-bottom: var(--margin-large);
     }
   }
 
@@ -70,7 +70,7 @@
       margin-left: 6rem;
     }
     @include abstracts.respondMax(abstracts.$breakpoint-large) {
-      margin-top: 6rem;
+      margin-top: var(--margin-large);
       margin-left: 0rem;
       width: 100%;
     }

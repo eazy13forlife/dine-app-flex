@@ -32,9 +32,9 @@
     height: 100rem;
   }
   &__svg-container {
-    margin-bottom: 15rem;
+    margin-bottom: var(--margin-extra-large);
     @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
-      margin-bottom: 8rem;
+      margin-bottom: var(--margin-large);
     }
   }
 

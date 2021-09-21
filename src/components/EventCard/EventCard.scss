@@ -48,7 +48,7 @@
   }
   &__button {
     align-self: flex-start;
-    margin-bottom: 6rem;
+    margin-bottom: var(--margin-large);
     @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
       margin: auto;
     }
@@ -59,7 +59,7 @@
       order: -2;
       display: flex;
       justify-content: space-between;
-      margin: 5rem 0rem;
+      margin: var(--margin-large) 0rem;
       align-items: flex-start;
     }
     @include abstracts.respondMax(600px) {
@@ -73,7 +73,7 @@
     cursor: pointer;
     position: relative;
     &:not(:last-child) {
-      margin-bottom: 2rem;
+      margin-bottom: var(--margin-small);
     }
     &:hover {
       color: var(--dark);

@@ -59,7 +59,7 @@
   &__description-card-enjoyable {
     margin-left: 10rem;
     @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
-      margin-top: 5rem;
+      margin-top: var(--margin-large);
       margin-left: 0rem;
       text-align: center;
     }
@@ -78,7 +78,7 @@
   &__description-card-local {
     margin-right: 10rem;
     @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
-      margin-top: 5rem;
+      margin-top: var(--margin-large);
       margin-right: 0rem;
       text-align: center;
       order: 1;

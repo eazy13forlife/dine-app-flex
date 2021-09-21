@@ -22,7 +22,7 @@
     flex: 0 0 70%;
     margin-right: 2rem;
     @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
-      margin-bottom: 4rem;
+      margin-bottom: var(--margin-regular);
       margin-right: 0rem;
     }
   }

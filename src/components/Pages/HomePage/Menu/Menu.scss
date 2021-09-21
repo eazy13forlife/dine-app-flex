@@ -29,7 +29,7 @@
   }
   .MenuCard {
     &:not(:last-of-type) {
-      margin-bottom: 2rem;
+      margin-bottom: var(--margin-small);
     }
     &__figure {
       @include abstracts.respondMax(abstracts.$breakpoint-large) {
@@ -42,7 +42,7 @@
   }
   &__items {
     @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
-      margin-top: 8rem;
+      margin-top: var(--margin-large);
     }
   }
   &__salmon {
