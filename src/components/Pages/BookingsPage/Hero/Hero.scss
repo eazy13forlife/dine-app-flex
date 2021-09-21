@@ -9,6 +9,9 @@
   @include abstracts.respondMax(1100px) {
     padding: 5rem 5rem 8rem 5rem;
   }
+  @include abstracts.respondMax(450px) {
+    padding: 5rem 3rem 8rem 3rem;
+  }
   @include abstracts.respondMax(abstracts.$breakpoint-phone) {
     padding: 5rem 2rem 8rem 2rem;
   }

@@ -9,9 +9,7 @@
   @include abstracts.respondMax(abstracts.$breakpoint-large) {
     padding: 8rem 5rem;
   }
-  @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
-    justify-content: flex-start;
-  }
+
   @include abstracts.respondMax(abstracts.$breakpoint-phone) {
     flex-direction: column;
     padding: 5rem 3rem;
