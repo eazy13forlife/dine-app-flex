@@ -27,6 +27,10 @@
     flex-direction: column;
     align-items: center;
   }
+  @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+    padding: 50vw 3rem 10rem 3rem;
+    height: 100rem;
+  }
   &__svg-container {
     margin-bottom: 15rem;
     @include abstracts.respondMax(abstracts.$breakpoint-tablet) {

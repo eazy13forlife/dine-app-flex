@@ -1,31 +1,87 @@
 @use "../../../../styles/abstracts";
 
 .Reservations-Hero {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr min-content 1fr;
-  grid-row-gap: 5rem;
-  padding: 0rem 16rem;
-  background-image: url("../../../../images/booking/hero-bg-desktop@2x.jpg");
-  height: 60rem;
   color: var(--light);
+  padding: 5rem 10rem 8rem 10rem;
+  background-image: url("../../../../images/booking/hero-bg-desktop@2x.jpg");
   background-size: cover;
-  @include abstracts.respondMax(1150px) {
-    padding: 0rem 10rem;
+
+  @include abstracts.respondMax(1100px) {
+    padding: 5rem 5rem 8rem 5rem;
   }
-  @include abstracts.respondMax(1000px) {
-    padding: 0rem 8rem;
+  @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+    padding: 5rem 2rem 8rem 2rem;
   }
-  &__logo {
-    grid-row: 1/2;
-    margin-top: 6.5rem;
+  &__logo-container {
+    cursor: pointer;
+    margin-bottom: 10rem;
+    @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    height: 30rem;
+    @include abstracts.respondMax(abstracts.$breakpoint-large) {
+      flex-direction: column;
+      width: 80%;
+      margin: auto;
+    }
+    @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      width: 85%;
+    }
+    @include abstracts.respondMax(600px) {
+      width: 100%;
+    }
+    @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+      height: 40rem;
+    }
+  }
+  &__info {
+    flex: 0 0 40%;
+    @include abstracts.respondMax(abstracts.$breakpoint-large) {
+      text-align: center;
+    }
   }
   &__heading {
-    grid-column: 1/5;
-    grid-row: 2/3;
+    margin-bottom: var(--margin-regular);
+    @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      font-size: 5.2rem !important;
+    }
+    @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+      font-size: 4.5rem !important;
+    }
   }
   &__text {
-    grid-column: 1/6;
-    grid-row: 3/4;
+  }
+  &__button {
+    margin-top: var(--margin-regular);
+  }
+  &__form {
+    position: relative;
+    margin-left: 10rem;
+    z-index: 3;
+    @include abstracts.respondMax(1200px) {
+      margin-left: 6rem;
+    }
+    @include abstracts.respondMax(abstracts.$breakpoint-large) {
+      margin-top: 6rem;
+      margin-left: 0rem;
+      width: 100%;
+    }
+    @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      width: 100%;
+    }
+  }
+  &__hamburger {
+    position: absolute;
+    top: 95%;
+    left: -8%;
+    z-index: -1;
+    @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+      display: none;
+    }
   }
 }

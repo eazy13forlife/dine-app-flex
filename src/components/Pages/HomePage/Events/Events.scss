@@ -6,6 +6,9 @@
   @include abstracts.respondMax(abstracts.$breakpoint-large) {
     padding: 10rem 5rem;
   }
+  @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+    padding: 7rem 3rem;
+  }
   &__rectangle-right {
     position: absolute;
     width: 50rem;
@@ -13,6 +16,9 @@
     left: 0rem;
     top: 0rem;
   }
-  .EventCard {
+  .Hamburger {
+    @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+      display: none;
+    }
   }
 }

@@ -1,8 +1,9 @@
 .ReservationForm {
+  color: var(--dark);
   width: 100%;
   padding: 4rem;
   background-color: var(--light);
-  box-shadow: 0rem 15rem 21rem -14rem black;
+  box-shadow: var(--primary-box-shadow);
   &__group {
     display: flex;
     justify-content: space-between;

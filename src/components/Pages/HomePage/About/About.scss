@@ -6,6 +6,9 @@
   @include abstracts.respondMax(abstracts.$breakpoint-large) {
     padding: 5rem 7rem;
   }
+  @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+    padding: 5rem 3rem;
+  }
   &__flex-container {
     display: flex;
     align-items: center;
@@ -69,7 +72,7 @@
     }
   }
   &__locally-sourced {
-    transform: translatey(8rem);
+    transform: translatey(6rem);
     @include abstracts.respondMax(abstracts.$breakpoint-large) {
       transform: translatey(0rem);
     }
@@ -98,5 +101,8 @@
     right: 3%;
     z-index: 2;
     top: 70%;
+    @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+      display: none;
+    }
   }
 }

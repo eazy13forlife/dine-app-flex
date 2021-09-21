@@ -12,13 +12,18 @@
   @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
     padding: 5rem 5rem;
     flex-direction: column;
+    text-align: center;
     align-items: center;
+  }
+  @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+    padding: 6rem 3rem;
   }
   &__heading {
     flex: 0 0 70%;
     margin-right: 2rem;
     @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
       margin-bottom: 4rem;
+      margin-right: 0rem;
     }
   }
   &__button {

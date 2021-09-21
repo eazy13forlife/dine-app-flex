@@ -25,6 +25,8 @@ html {
   @include abstracts.respondMax(900px) {
     font-size: 56.25%;
   }
+  @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+  }
 }
 
 *,

@@ -1,6 +1,22 @@
 @use "../../../../styles/abstracts";
 
 .Reservation {
+  height: 30rem;
+  position: relative;
+  display: flex;
+  @include abstracts.respondMax(abstracts.$breakpoint-large) {
+    height: 60rem;
+  }
+  &__rectangle {
+    position: absolute;
+    z-index: -1;
+    width: 70%;
+    top: 0;
+    left: 0;
+  }
+}
+/*
+.Reservation {
   height: 32rem;
   display: grid;
   grid-template-columns:
@@ -60,3 +76,4 @@
     }
   }
 }
+*/

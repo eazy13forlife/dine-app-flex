@@ -2,19 +2,13 @@ import React from "react";
 
 import Hamburger from "../../../Hamburger/Hamburger.js";
 import ReservationForm from "../../../Forms/ReservationForm.js";
+import Rectangle from "../../../Rectangle/Rectangle.js";
 import "./Reservation.scss";
 
 const Reservation = () => {
   return (
     <div className="Reservation">
-      <div className="rectangle rectangle--top-right-curved Reservation__rectangle"></div>
-      <Hamburger
-        number={6}
-        width="16rem"
-        height="6px"
-        className="Reservation__hamburger"
-      />
-      <ReservationForm />
+      <Rectangle side="bottom-right" additionalClass="Reservation__rectangle" />
     </div>
   );
 };

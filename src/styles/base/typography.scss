@@ -6,6 +6,8 @@ bold-700
 
 **/
 //HEADINGS
+@use "../abstracts";
+
 .primary-heading {
   font-weight: 300;
   line-height: 7.2rem;
@@ -18,6 +20,9 @@ bold-700
   line-height: 5.6rem;
   font-size: 4rem;
   letter-spacing: -0.5px;
+  @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+    font-size: 3.5rem;
+  }
 }
 
 .tertiary-heading-large {

@@ -12,20 +12,39 @@
   @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
     justify-content: flex-start;
   }
+  @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+    flex-direction: column;
+    padding: 5rem 3rem;
+    align-items: center;
+    text-align: center;
+  }
   &__info {
     display: flex;
-    margin-left: 8rem;
+    flex: 0 0 70%;
+    justify-content: space-between;
     @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
       flex-direction: column;
       margin-left: 8rem;
+    }
+    @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+      margin-left: 0rem;
+    }
+  }
+  &__logo-container {
+    flex: 0 0 30%;
+    @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+      margin-bottom: 5rem;
     }
   }
   &__logo {
   }
   &__address {
+    margin-right: 5rem;
+    @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+      margin-right: 0rem;
+    }
   }
   &__hours {
-    margin-left: 8rem;
     @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
       margin-left: 0rem;
       margin-top: 6rem;
