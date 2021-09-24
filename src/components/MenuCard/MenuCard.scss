@@ -5,7 +5,7 @@
   display: flex;
   border-bottom: 1px solid var(--primary-color-1);
   padding-bottom: 2rem;
-  @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+  @include abstracts.respondMax(450px) {
     flex-direction: column;
   }
   &__figure {
@@ -23,7 +23,7 @@
     top: 1.5rem;
     left: 100%;
     padding-right: 2rem;
-    @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+    @include abstracts.respondMax(450px) {
       display: none;
     }
   }
@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 5rem;
-    @include abstracts.respondMax(abstracts.$breakpoint-phone) {
+    @include abstracts.respondMax(450px) {
       text-align: center;
       margin-left: 0rem;
       margin-top: 3rem;

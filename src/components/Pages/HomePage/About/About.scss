@@ -6,6 +6,9 @@
   @include abstracts.respondMax(abstracts.$breakpoint-large) {
     padding: 5rem 7rem;
   }
+  @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+    padding: 5rem 5rem;
+  }
   @include abstracts.respondMax(abstracts.$breakpoint-phone) {
     padding: 5rem 3rem;
   }
@@ -54,6 +57,8 @@
       width: 100%;
       height: 50rem;
       object-fit: cover;
+
+      object-position: 70% 50%;
     }
   }
   &__description-card-enjoyable {

@@ -1,11 +1,11 @@
 @use "../../../../styles/abstracts";
 
 .Menu {
-  padding: 20rem 8rem 10rem 8rem;
+  padding: 20rem 10rem 10rem 10rem;
   display: flex;
   background-color: var(--dark);
   @include abstracts.respondMax(abstracts.$breakpoint-large) {
-    padding: 10rem 8rem;
+    padding: 10rem 7rem;
   }
   @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
     flex-direction: column;

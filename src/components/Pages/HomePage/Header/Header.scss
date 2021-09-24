@@ -8,28 +8,61 @@
       var(--dark) 30%,
       transparent 30%
     ),
-    url("../../../../images/homepage/hero-bg-desktop@2x.jpg");
+    url("../../../../images/homepage/hero-bg-desktop.jpg");
   background-size: cover;
   background-position: 65% 0%;
+  @media (min-resolution: 192dpi) {
+    background-image: linear-gradient(
+        to right,
+        var(--dark) 0%,
+        var(--dark) 30%,
+        transparent 30%
+      ),
+      url("../../../../images/homepage/hero-bg-desktop@2x.jpg");
+  }
   @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
     height: 110rem;
     padding: 50vw 10rem 20rem 10rem;
     background-image: linear-gradient(
         to bottom,
         transparent 0vw,
-        transparent,
-        45vw,
+        transparent 45vw,
         var(--dark) 45vw
       ),
-      url("../../../../images/homepage/hero-bg-tablet@2x.jpg");
+      url("../../../../images/homepage/hero-bg-tablet.jpg");
     background-size: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (min-resolution: 192dpi) {
+      background-image: linear-gradient(
+          to bottom,
+          transparent 0vw,
+          transparent 45vw,
+          var(--dark) 45vw
+        ),
+        url("../../../../images/homepage/hero-bg-tablet@2x.jpg");
+    }
   }
   @include abstracts.respondMax(abstracts.$breakpoint-phone) {
-    padding: 50vw 3rem 10rem 3rem;
+    padding: 55vw 3rem 10rem 3rem;
     height: 100rem;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 0vw,
+        transparent 50vw,
+        var(--dark) 50vw
+      ),
+      url("../../../../images/homepage/hero-bg-mobile.jpg");
+    @media (min-resolution: 192dpi) {
+      background-image: linear-gradient(
+          to bottom,
+          transparent 0vw,
+          transparent 50vw,
+          var(--dark) 50vw
+        ),
+        url("../../../../images/homepage/hero-bg-mobile@2x.jpg");
+    }
   }
   &__svg-container {
     margin-bottom: var(--margin-extra-large);

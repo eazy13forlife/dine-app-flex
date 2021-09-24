@@ -19,19 +19,19 @@ const Menu = () => {
       />
       <div className="Menu__items">
         <MenuCard
-          image={salmonPic}
+          name="salmon"
           heading="Seared Salmon Filet"
           bodyText="Our locally sourced salmon served with a refreshing buckwheat summer salad."
           className="Menu__salmon"
         />
         <MenuCard
-          image={filetMignonPic}
+          name="beef"
           heading="Rosemary Filet Mignon"
           bodyText="Our primed beef served to your taste with a delicious choice of seasonal sides."
           className="Menu__filet"
         />
         <MenuCard
-          image={moussePic}
+          name="mousse"
           heading="Summer Fruit Chocolate Mousse"
           bodyText="Creamy mousse combined with summer fruits and dark chocolate servings."
           className="Menu__mousse"

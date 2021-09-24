@@ -1,11 +1,13 @@
 import React from "react";
+import images from "../../../../images";
 
-import enjoyableDesktop from "../../../../images/homepage/enjoyable-place-desktop.jpg";
-import locallySourced from "../../../../images/homepage/locally-sourced-desktop.jpg";
 import DescriptionCard from "../../../DescriptionCard/DescriptionCard.js";
 import Rectangle from "../../../Rectangle/Rectangle.js";
 import Hamburger from "../../../Hamburger/Hamburger.js";
 import "./About.scss";
+
+console.log(images);
+console.log(images["enjoyable-place-desktop.jpg"]);
 
 const About = () => {
   return (
@@ -17,13 +19,26 @@ const About = () => {
       <Rectangle side="top-left" additionalClass="About__rectangle-top-left" />
       <Hamburger number="6" additionalClass="About__hamburger" />
       <div className="About__flex-container About__enjoyable-place">
-        <figure className="About__image-container About__image-container--farm">
+        <picture className="About__image-container About__image-container--farm">
+          <source
+            media="(max-width:22.81em)"
+            srcSet={`${images.enjoyablePlaceMobileJpg} 1x, ${images.enjoyablePlaceMobile2XJpg} 2x`}
+          />
+          <source
+            media="(max-width:48em)"
+            srcSet={`${images.enjoyablePlaceTabletJpg} 1x, ${images.enjoyablePlaceTablet2XJpg} 2x`}
+          />
+          <source
+            srcSet={`${images.enjoyablePlaceDesktopJpg} 1x, ${images.enjoyablePlaceDesktop2XJpg} 2x`}
+          />
+
           <img
-            src={enjoyableDesktop}
+            src={images.enjoyablePlaceDesktopJpg}
             alt="Hilly farm with grazing animals"
             className="About__image"
           />
-        </figure>
+        </picture>
+
         <DescriptionCard
           heading="Enjoyable place for all the family"
           bodyText="Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange a tour of the farm before your meal."
@@ -31,7 +46,6 @@ const About = () => {
           color="var(--primary-color)"
         />
       </div>
-
       <div className="About__flex-container About__locally-sourced">
         <DescriptionCard
           heading="The most locally sourced food"
@@ -39,13 +53,25 @@ const About = () => {
           className="About__description-card-local"
           color="var(--primary-color)"
         />
-        <figure className="About__image-container About__image-container-chef">
+        <picture className="About__image-container About__image-container-chef">
+          <source
+            media="(max-width:22.81em)"
+            srcSet={`${images.locallySourcedMobileJpg} 1x, ${images.locallySourcedMobile2XJpg} 2x`}
+          />
+          <source
+            media="(max-width:48em)"
+            srcSet={`${images.locallySourcedTabletJpg} 1x, ${images.locallySourcedTablet2XJpg} 2x`}
+          />
+          <source
+            srcSet={`${images.locallySourcedDesktopJpg} 1x, ${images.locallySourcedDesktop2XJpg} 2x`}
+          />
+
           <img
-            src={locallySourced}
+            src={images.locallySourcedDesktopJpg}
             alt="A chef adding the finishing touches to a dish"
             className="About__image"
           />
-        </figure>
+        </picture>
       </div>
     </div>
   );
