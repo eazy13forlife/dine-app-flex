@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import DarkButton from "../Buttons/DarkButton.js";
 import history from "../../history.js";
@@ -32,9 +32,10 @@ const respImages = {
     mobile: images.socialEventsMobileJpg,
   },
 };
-const EventCard = ({ name, heading, bodyText, onOptionClick, selected }) => {
+const EventCard = ({ name, heading, bodyText, onOptionClick }) => {
   const { desktop2x, desktop, tablet2x, tablet, mobile2x, mobile } =
     respImages[name];
+
   const renderListClass = (name) => {
     if (heading === name) {
       return "EventCard__list-item--selected";

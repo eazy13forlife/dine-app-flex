@@ -136,32 +136,20 @@ const images = {
   patternLinesSvg,
 };
 
-/*
-const string = "lemon/booking/chocolate-mobile.jpg";
-const regExp = /\b(?!.*homepage\b)\b(?!.*booking\b)[^/][^.]+/;
-const regExp2 = /(?!.*(homepage|booking)).*$/;
-console.log(string.match(regExp));
-const populateImagesObject2 = (imagesArray) => {
-  for (let i = 0; i < imagesArray.length; i++) {
-    const relativeImgPath = imagesArray[i];
-    const regExp = /([\w]).+(?:jpg|svg|png|jpe?g)$/;
-    const imageName = relativeImgPath.match(regExp)[0];
-    images[imageName] = relativeImgPath;
-  }
-};
-*/
-
 const populateImagesObject = (imagesArray) => {
   for (let i = 0; i < imagesArray.length; i++) {
+    /*
     const relativeImgPath = imagesArray[i];
     const splitPathArray = relativeImgPath.split("/");
+
     const imgName = splitPathArray[splitPathArray.length - 1];
 
-    //get all the import[name] from "[image file path]"
+    //get all the `import[name] from "[image file path]"`
     console.table(`import ${camelCase(imgName)} from "${relativeImgPath}"`);
 
     //get all the names of the pic in camelCase, followed by a comma, so I can use in object
     console.table(`${camelCase(imgName)},`);
+    */
   }
 };
 

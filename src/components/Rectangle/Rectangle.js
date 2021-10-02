@@ -6,7 +6,7 @@ const Rectangle = ({ side, additionalClass }) => {
   return (
     <div
       className={`Rectangle ${additionalClass}`}
-      style={{ [`border-${side}-radius`]: "10rem" }}
+      style={{ [`border${side}Radius`]: "10rem" }}
     ></div>
   );
 };

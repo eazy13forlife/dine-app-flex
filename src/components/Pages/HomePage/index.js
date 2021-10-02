@@ -5,7 +5,7 @@ import Header from "./Header/Header";
 import About from "./About/About.js";
 import Menu from "./Menu/Menu.js";
 import Events from "./Events/Events.js";
-import Reservation from "./Booking/Booking.js";
+
 import Booking from "./Booking/Booking.js";
 import Footer from "../../Footer/Footer.js";
 

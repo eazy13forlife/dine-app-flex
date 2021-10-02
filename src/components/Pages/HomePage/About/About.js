@@ -6,17 +6,11 @@ import Rectangle from "../../../Rectangle/Rectangle.js";
 import Hamburger from "../../../Hamburger/Hamburger.js";
 import "./About.scss";
 
-console.log(images);
-console.log(images["enjoyable-place-desktop.jpg"]);
-
 const About = () => {
   return (
     <div className="About">
-      <Rectangle
-        side="top-right"
-        additionalClass="About__rectangle-top-right"
-      />
-      <Rectangle side="top-left" additionalClass="About__rectangle-top-left" />
+      <Rectangle side="TopRight" additionalClass="About__rectangle-top-right" />
+      <Rectangle side="TopLeft" additionalClass="About__rectangle-top-left" />
       <Hamburger number="6" additionalClass="About__hamburger" />
       <div className="About__flex-container About__enjoyable-place">
         <picture className="About__image-container About__image-container--farm">
@@ -78,14 +72,3 @@ const About = () => {
 };
 
 export default About;
-
-/*
-
-  <Hamburger
-        number={6}
-        width="16rem"
-        height="6px"
-        className="About__hamburger"
-      />
-      <div className="rectangle rectangle--left-curved About__rectangle-left"></div>
-      */

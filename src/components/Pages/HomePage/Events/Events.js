@@ -1,8 +1,5 @@
-import Reac, { useState } from "react";
+import React, { useState } from "react";
 
-import familyGathering from "../../../../images/homepage/family-gathering-desktop.jpg";
-import socialEvents from "../../../../images/homepage/social-events-desktop.jpg";
-import specialEvents from "../../../../images/homepage/special-events-desktop.jpg";
 import EventCard from "../../../EventCard/EventCard.js";
 import Rectangle from "../../../Rectangle/Rectangle.js";
 
@@ -48,7 +45,7 @@ const Events = () => {
 
   return (
     <div className="Events">
-      <Rectangle side="top-right" additionalClass="Events__rectangle-right" />
+      <Rectangle side="TopRight" additionalClass="Events__rectangle-right" />
       {renderedEvent()}
     </div>
   );

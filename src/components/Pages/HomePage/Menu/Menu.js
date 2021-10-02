@@ -3,9 +3,6 @@ import React from "react";
 import DescriptionCard from "../../../DescriptionCard/DescriptionCard.js";
 import MenuCard from "../../../MenuCard/MenuCard.js";
 
-import salmonPic from "../../../../images/homepage/salmon-desktop-tablet.jpg";
-import moussePic from "../../../../images/homepage/chocolate-desktop-tablet.jpg";
-import filetMignonPic from "../../../../images/homepage/beef-desktop-tablet.jpg";
 import "./Menu.scss";
 
 const Menu = () => {
