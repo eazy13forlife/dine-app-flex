@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import EventCard from "../../../EventCard/EventCard.js";
-import Rectangle from "../../../Rectangle/Rectangle.js";
+import EventCard from "../../../components/EventCard/EventCard.js";
+import Rectangle from "../../../components/Rectangle/Rectangle.js";
 
 import "./Events.scss";
 

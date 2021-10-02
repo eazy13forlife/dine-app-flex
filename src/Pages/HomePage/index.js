@@ -7,7 +7,7 @@ import Menu from "./Menu/Menu.js";
 import Events from "./Events/Events.js";
 
 import Booking from "./Booking/Booking.js";
-import Footer from "../../Footer/Footer.js";
+import Footer from "../../components/Footer/Footer.js";
 
 const HomePage = () => {
   return (

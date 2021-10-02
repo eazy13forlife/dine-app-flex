@@ -1,30 +1,30 @@
-@use "../../../../styles/abstracts";
+@use "../../../styles/abstracts";
 
 .Reservations-Hero {
   color: var(--light);
   padding: 5rem 10rem 8rem 10rem;
-  background-image: url("../../../../images/booking/hero-bg-desktop.jpg");
+  background-image: url("../../../images/booking/hero-bg-desktop.jpg");
   background-size: cover;
   @media (min-resolution: 192dpi) {
-    background-image: url("../../../../images/booking/hero-bg-desktop@2x.jpg");
+    background-image: url("../../../images/booking/hero-bg-desktop@2x.jpg");
   }
   @include abstracts.respondMax(1100px) {
     padding: 5rem 5rem 8rem 5rem;
   }
   @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
-    background-image: url("../../../../images/booking/hero-bg-tablet.jpg");
+    background-image: url("../../../images/booking/hero-bg-tablet.jpg");
     @media (min-resolution: 192dpi) {
-      background-image: url("../../../../images/booking/hero-bg-tablet@2x.jpg");
+      background-image: url("../../../images/booking/hero-bg-tablet@2x.jpg");
     }
   }
   @include abstracts.respondMax(450px) {
     padding: 5rem 3rem 8rem 3rem;
   }
   @include abstracts.respondMax(abstracts.$breakpoint-phone) {
-    background-image: url("../../../../images/booking/hero-bg-mobile.jpg");
+    background-image: url("../../../images/booking/hero-bg-mobile.jpg");
     padding: 5rem 2rem 8rem 2rem;
     @media (min-resolution: 192dpi) {
-      background-image: url("../../../../images/booking/hero-bg-mobile@2x.jpg");
+      background-image: url("../../../images/booking/hero-bg-mobile@2x.jpg");
     }
   }
   &__logo-container {

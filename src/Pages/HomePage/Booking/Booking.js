@@ -1,7 +1,7 @@
 import React from "react";
 
-import LightButton from "../../../Buttons/LightButton.js";
-import history from "../../../../history.js";
+import LightButton from "../../../components/Buttons/LightButton.js";
+import history from "../../../history.js";
 import "./Booking.scss";
 
 const Booking = () => {

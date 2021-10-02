@@ -1,9 +1,8 @@
 import React from "react";
-import images from "../../../../images";
-
-import DescriptionCard from "../../../DescriptionCard/DescriptionCard.js";
-import Rectangle from "../../../Rectangle/Rectangle.js";
-import Hamburger from "../../../Hamburger/Hamburger.js";
+import images from "../../../images";
+import DescriptionCard from "../../../components/DescriptionCard/DescriptionCard.js";
+import Rectangle from "../../../components/Rectangle/Rectangle.js";
+import Hamburger from "../../../components/Hamburger/Hamburger.js";
 import "./About.scss";
 
 const About = () => {

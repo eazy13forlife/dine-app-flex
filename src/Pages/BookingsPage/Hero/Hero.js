@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { ReactComponent as DineLogo } from "../../../../images/logo.svg";
-import ReservationForm from "../../../Forms/ReservationForm.js";
-import LightButton from "../../../Buttons/LightButton.js";
-import Hamburger from "../../../Hamburger/Hamburger.js";
-import history from "../../../../history.js";
+import { ReactComponent as DineLogo } from "../../../images/logo.svg";
+import ReservationForm from "../../../components/Forms/ReservationForm.js";
+import LightButton from "../../../components/Buttons/LightButton.js";
+import Hamburger from "../../../components/Hamburger/Hamburger.js";
+import history from "../../../history.js";
 import "./Hero.scss";
 
 const Hero = () => {

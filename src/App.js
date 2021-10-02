@@ -2,8 +2,8 @@ import React from "react";
 import { Router, Route } from "react-router-dom";
 import history from "./history.js";
 
-import HomePage from "./components/Pages/HomePage";
-import BookingPage from "./components/Pages/BookingsPage";
+import HomePage from "./Pages/HomePage";
+import BookingPage from "./Pages/BookingsPage";
 
 const App = () => {
   return (

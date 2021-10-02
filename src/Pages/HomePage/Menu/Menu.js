@@ -1,7 +1,7 @@
 import React from "react";
 
-import DescriptionCard from "../../../DescriptionCard/DescriptionCard.js";
-import MenuCard from "../../../MenuCard/MenuCard.js";
+import DescriptionCard from "../../../components/DescriptionCard/DescriptionCard.js";
+import MenuCard from "../../../components/MenuCard/MenuCard.js";
 
 import "./Menu.scss";
 

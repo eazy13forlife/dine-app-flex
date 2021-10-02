@@ -1,4 +1,4 @@
-@use "../../../../styles/abstracts";
+@use "../../../styles/abstracts";
 .Header {
   color: var(--light);
   padding: 8rem 10rem 15rem 10rem;
@@ -8,7 +8,7 @@
       var(--dark) 30%,
       transparent 30%
     ),
-    url("../../../../images/homepage/hero-bg-desktop.jpg");
+    url("../../../images/homepage/hero-bg-desktop.jpg");
   background-size: cover;
   background-position: 65% 0%;
   @media (min-resolution: 192dpi) {
@@ -18,7 +18,7 @@
         var(--dark) 30%,
         transparent 30%
       ),
-      url("../../../../images/homepage/hero-bg-desktop@2x.jpg");
+      url("../../../images/homepage/hero-bg-desktop@2x.jpg");
   }
   @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
     height: 110rem;
@@ -29,7 +29,7 @@
         transparent 45vw,
         var(--dark) 45vw
       ),
-      url("../../../../images/homepage/hero-bg-tablet.jpg");
+      url("../../../images/homepage/hero-bg-tablet.jpg");
     background-size: 100%;
     display: flex;
     flex-direction: column;
@@ -41,7 +41,7 @@
           transparent 45vw,
           var(--dark) 45vw
         ),
-        url("../../../../images/homepage/hero-bg-tablet@2x.jpg");
+        url("../../../images/homepage/hero-bg-tablet@2x.jpg");
     }
   }
   @include abstracts.respondMax(abstracts.$breakpoint-phone) {
@@ -53,7 +53,7 @@
         transparent 50vw,
         var(--dark) 50vw
       ),
-      url("../../../../images/homepage/hero-bg-mobile.jpg");
+      url("../../../images/homepage/hero-bg-mobile.jpg");
     @media (min-resolution: 192dpi) {
       background-image: linear-gradient(
           to bottom,
@@ -61,7 +61,7 @@
           transparent 50vw,
           var(--dark) 50vw
         ),
-        url("../../../../images/homepage/hero-bg-mobile@2x.jpg");
+        url("../../../images/homepage/hero-bg-mobile@2x.jpg");
     }
   }
   &__svg-container {

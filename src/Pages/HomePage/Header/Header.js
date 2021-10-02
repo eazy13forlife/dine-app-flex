@@ -1,8 +1,8 @@
 import React from "react";
-import { ReactComponent as DineLogo } from "../../../../images/logo.svg";
-import history from "../../../../history.js";
+import { ReactComponent as DineLogo } from "../../../images/logo.svg";
+import history from "../../../history.js";
 
-import LightButton from "../../../Buttons/LightButton.js";
+import LightButton from "../../../components/Buttons/LightButton.js";
 import "./Header.scss";
 
 const Header = () => {

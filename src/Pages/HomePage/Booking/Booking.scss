@@ -1,34 +1,34 @@
-@use "../../../../styles/abstracts";
+@use "../../../styles/abstracts";
 
 .Booking {
-  background-image: url("../../../../images/homepage/ready-bg-desktop.jpg");
+  background-image: url("../../../images/homepage/ready-bg-desktop.jpg");
   background-size: cover;
   padding: 8rem 8rem;
   display: flex;
   justify-content: space-between;
   color: var(--light);
   @media (min-resolution: 192dpi) {
-    background-image: url("../../../../images/homepage/ready-bg-desktop@2x.jpg");
+    background-image: url("../../../images/homepage/ready-bg-desktop@2x.jpg");
   }
   @include abstracts.respondMax(abstracts.$breakpoint-large) {
     background-position: 15% 50%;
     padding: 8rem 7rem;
   }
   @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
-    background-image: url("../../../../images/homepage/ready-bg-tablet.jpg");
+    background-image: url("../../../images/homepage/ready-bg-tablet.jpg");
     padding: 5rem 5rem;
     flex-direction: column;
     text-align: center;
     align-items: center;
     @media (min-resolution: 192dpi) {
-      background-image: url("../../../../images/homepage/ready-bg-tablet@2x.jpg");
+      background-image: url("../../../images/homepage/ready-bg-tablet@2x.jpg");
     }
   }
   @include abstracts.respondMax(abstracts.$breakpoint-phone) {
-    background-image: url("../../../../images/homepage/ready-bg-mobile.jpg");
+    background-image: url("../../../images/homepage/ready-bg-mobile.jpg");
     padding: 6rem 3rem;
     @media (min-resolution: 192dpi) {
-      background-image: url("../../../../images/homepage/ready-bg-mobile@2x.jpg");
+      background-image: url("../../../images/homepage/ready-bg-mobile@2x.jpg");
     }
   }
   &__heading {
