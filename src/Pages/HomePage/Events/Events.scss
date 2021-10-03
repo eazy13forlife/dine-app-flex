@@ -7,7 +7,7 @@
     padding: 10rem 7rem;
   }
   @include abstracts.respondMax(abstracts.$breakpoint-phone) {
-    padding: 7rem 3rem;
+    padding: 7rem 3rem 12rem 3rem;
   }
   &__rectangle-right {
     position: absolute;

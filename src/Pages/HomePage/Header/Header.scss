@@ -22,7 +22,7 @@
   }
   @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
     height: 110rem;
-    padding: 50vw 10rem 20rem 10rem;
+    padding: 50vw 4rem 20rem 4rem;
     background-image: linear-gradient(
         to bottom,
         transparent 0vw,
@@ -46,7 +46,7 @@
   }
   @include abstracts.respondMax(abstracts.$breakpoint-phone) {
     padding: 55vw 3rem 10rem 3rem;
-    height: 100rem;
+    height: 110rem;
     background-image: linear-gradient(
         to bottom,
         transparent 0vw,
@@ -74,8 +74,11 @@
   &__content {
     width: 50%;
     @include abstracts.respondMax(abstracts.$breakpoint-tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      width: 100%;
+      width: 80%;
     }
   }
   &__heading {
