@@ -1,6 +1,6 @@
-# Eazy-E Postings
+# Dine App
 
-Eazy-E Postings is a fully responsive, international job search application.
+This is a solution to the Dine restaurant website on Frontend Mentor. It is a fully responsive two-page website, including a form.
 
 ## Images
 ![Screen Shot 2022-06-04 at 9 16 50 PM](https://user-images.githubusercontent.com/72288176/172034854-e0a8485d-482d-44c3-b3f2-0b60dedb5bc6.png)
@@ -9,20 +9,20 @@ Eazy-E Postings is a fully responsive, international job search application.
 
 ## Technologies
 * React
-* Redux
-* React Router
 * Javascript
 * SCSS
+* Semantic HTML5 markup
+* CSS custom properties
+* Flexbox
+* CSS Grid
 
 
 ## Notable Features
 * Fully responsive
-* App initially populates with all relevant jobs near the user's location
-* User can filter jobs by date of posting, salary, contract time
-* User can search for jobs based on country, location, company and popular job roles
-* User can choose among predefined job roles like marketing and sales, predefined companies like Google and predefined locations like New York, NY.
-* Real time location search results for when user is typing a location
+* Reservation form
 
+## Thought Process
 
-## Ideas to implements
-* Favorited job section
+I mainly chose this project in order to experiment with Redux Form, in addition to practicing my css and responsive skills.
+
+Looking at a figma design file, I initially set up custom variables for colors, font size, and font family. Then, I created custom components used throughout the site like buttons (and their interactivity states) and any cards. Finally, I studied the grid layout and positioning of elements before I began coding.
