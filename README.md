@@ -2,6 +2,9 @@
 
 This is a solution to the Dine restaurant website on Frontend Mentor. It is a fully responsive two-page website, including a form.
 
+## Live Url
+https://dine-restaurant-sigma.vercel.app/
+
 ## Images
 ### Desktop
 ![screenshot-localhost_3000-2022 06 05-21_33_49](https://user-images.githubusercontent.com/72288176/172095504-03f5144b-a0ca-418f-b2ee-541d743477d2.png)
