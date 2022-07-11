@@ -1,5 +1,4 @@
 # Dine Restaurant
-
 This is a solution to the Dine restaurant website on Frontend Mentor. It is a fully responsive two-page website, including a form.
 
 ## Live Url
